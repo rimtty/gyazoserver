@@ -6,7 +6,7 @@ require 'haml'
 
 class MainApp < Sinatra::Base
 
-	post '/upl' do
+	post '/upload' do
 		id = params[:id]
 		imagedata = params[:imagedata][:tempfile].read
 
@@ -31,7 +31,7 @@ class MainApp < Sinatra::Base
 		    headers['X-Gyazo-Id'] = id
 		end
 		
-		"http://gya.rimd2r.info/#{hash}.png"
+		"http://hoge.com/#{hash}.png"
 	end
 
 end
